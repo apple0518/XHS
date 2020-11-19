@@ -60,6 +60,7 @@ public class Count extends BaseController {
     @GetMapping("/updata_collect")
     @ResponseBody
     public JSONObject collect_text(CollectTable collectTable, Boolean flag){
+        System.out.println(collectTable);
         JSONObject jsonObject = new JSONObject();
         CollectTable collectTable1 = collectTableService.selectCollectTableByUseridAndTextid(collectTable);
         if(flag&&collectTable1==null) {

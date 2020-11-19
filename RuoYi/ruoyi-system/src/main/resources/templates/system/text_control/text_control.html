@@ -15,9 +15,10 @@
                                 <input type="text" name="textname"/>
                             </li>
                             <li>
-                                <label>分类号：</label>
+                                <label>分类：</label>
 <!--                                <input type="text" name="cname"/>-->
-                                <select type = "text" name="cname" class="form-control" required>
+                                <select type = "text" name="csid" class="form-control" required>
+                                    <option text="分类"></option>
                                     <option th:each="classify:${classify_list}" th:text="${classify.cname}" th:value="${classify.csid}"></option>
                                 </select>
                             </li>
